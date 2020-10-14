@@ -43,17 +43,17 @@ $result3 = [
 </head>
 
 <body>
-    <h1 <?if ($red) :?>class="red"<?endif?>>Заголовок</h1>
+    <h1 <?php if ($red) :?>class="red"<?php endif?>>Заголовок</h1>
     <div>Авторов на портале <?= count($result3['authors']) ?></div>
     <!-- Выведите все книги -->
-    <?foreach ($result3['books'] as $book):?>
+    <?php foreach ($result3['books'] as $book):?>
     <p>
         Книга <?= $book['name'] ?>, ее написал
         <?= $result3['authors'][$book['mail']]['fullName'] ?>
         <?= $result3['authors'][$book['mail']]['yearOfBirth'] ?>
         (<?= $book['mail'] ?>)
     </p>
-    <?endforeach?>
+    <?php endforeach?>
 
 </body>
 </html>
